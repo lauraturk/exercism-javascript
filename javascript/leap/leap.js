@@ -1,14 +1,15 @@
-//
-// This is only a SKELETON file for the "Leap" exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+var Year = function(year) {
+	this.year = year;
+};
 
-var Year = function() {};
-
-Year.prototype.isLeap = function(input) {
-//
-// YOUR CODE GOES HERE
-//
+Year.prototype.isLeap = function() {
+	let results = false;
+	if(this.year % 100 === 0 && this.year % 400){
+		results = false;
+	} else if(this.year % 4 === 0){
+		results = true;
+	}
+	return results;
 };
 
 module.exports = Year;
